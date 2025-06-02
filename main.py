@@ -100,8 +100,8 @@ if __name__ == '__main__':
                 print("GPS data not available, publishing empty coordinates.")
                 payload = ujson.dumps({
                     "Device_id": DEVICE_ID,
-                    "Latitude": None,
-                    "Longitude": None,
+                    "Latitude": 0,
+                    "Longitude": 0,
                     "Timestamp": get_utc_time()
                 })
             else:
