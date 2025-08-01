@@ -3,11 +3,12 @@ import log
 import checkNet
 import ujson
 import utime
-from machine import Pin # type: ignore
-from usr.locator import Locator # type: ignore
+from machine import Pin 
+from usr.locator import Locator 
 import sms
 import ure  
 import dataCall
+
 #done signal pin
 done_pin = Pin(29, Pin.OUT, Pin.PULL_PU)
 
@@ -79,7 +80,6 @@ def get_GPS(max_retries=5, delay=5):
 
 
 if __name__ == '__main__':
-    # Define DONE pin (change GPIO4 to your actual connected pin)
     print("Checking network connection...")
     stagecode, subcode = checknet.wait_network_connected(30)
 
